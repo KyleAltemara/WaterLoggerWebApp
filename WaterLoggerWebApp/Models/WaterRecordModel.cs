@@ -1,6 +1,6 @@
 ﻿namespace WaterLoggerWebApp.Models;
 
-public class WaterRecord
+public class WaterRecordModel
 {
     public int Id { get; set; }
     public DateTime Date { get; set; }

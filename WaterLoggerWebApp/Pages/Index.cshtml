@@ -7,3 +7,30 @@
 <a button type="button" class="btn btn-success" asp-area="" asp-page="/Create">
     Add Record
 </a>
+
+<table id="records" class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.WaterRecords[0].Date)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.WaterRecords[0].Quantity)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var record in Model.WaterRecords)
+    {
+        <tr class="list-row">
+                <td>@record.Date</td>
+                <td>@record.Quantity</td>
+                <td>
+                    <a asp-page="Delete" asp-route-id="@record.Id">Delete</a> |
+                    <a asp-page="Edit" asp-route-id="@record.Id">Edit</a> |
+                </td>
+            </tr>
+    }
+    </tbody>
+</table>

@@ -10,7 +10,7 @@ public class CreateModel(IConfiguration configuration) : PageModel
     private readonly IConfiguration _configuration = configuration;
 
     [BindProperty]
-    public WaterRecord WaterRecord { get; set; }
+    public WaterRecordModel WaterRecord { get; set; }
 
     public IActionResult OnGet()
     {
