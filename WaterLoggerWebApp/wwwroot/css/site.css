@@ -59,3 +59,7 @@ body {
     background-color: #15446c;
     border: none;
 }
+
+.form-group{
+    margin-bottom: 1rem;
+}
