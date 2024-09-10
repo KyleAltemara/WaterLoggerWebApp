@@ -48,3 +48,14 @@ body {
     background-color: #5c5c5c;
     border: none;
 }
+
+.btn-primary {
+    background-color: white;
+    border: none;
+    color: #15446c;
+}
+
+.btn-success {
+    background-color: #15446c;
+    border: none;
+}
