@@ -11,6 +11,8 @@
     Add Record
 </a>
 
+<button type="button" class="btn btn-success" onclick="calculate()">Calculate Total</button>
+
 <table id="records" class="table">
     <thead>
         <tr>
@@ -25,8 +27,8 @@
     </thead>
     <tbody>
         @foreach (var record in Model.WaterRecords)
-    {
-        <tr class="list-row">
+        {
+            <tr class="list-row">
                 <td>@record.Date</td>
                 <td>@record.Quantity</td>
                 <td>
@@ -43,6 +45,9 @@
                     </a> |
                 </td>
             </tr>
-    }
+        }
     </tbody>
 </table>
+
+<div>@ViewData["Total"]</div>
+<div id="result"></div>
