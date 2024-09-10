@@ -15,6 +15,7 @@ public class IndexModel(IConfiguration configuration) : PageModel
     public void OnGet()
     {
         WaterRecords = GetAllRecords();
+        ViewData["Total"] = $"Total: {WaterRecords.Sum(x => x.Quantity)}";
     }
 
     private List<WaterRecordModel> GetAllRecords()
