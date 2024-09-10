@@ -9,7 +9,8 @@
     <link rel="stylesheet" href="~/WaterLoggerWebApp.styles.css" asp-append-version="true" />
 </head>
 <body>
-    <header>
+   <div class="background">
+        <header>
         <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light border-bottom box-shadow mb-3">
             <div class="container">
                 <a class="navbar-brand" asp-area="" asp-page="/Index">
@@ -21,23 +22,24 @@
                 </button>
             </div>
         </nav>
-    </header>
-    <div class="container">
-        <main role="main" class="pb-3">
-            @RenderBody()
-        </main>
-    </div>
-
-    <footer class="border-top footer text-muted">
+        </header>
         <div class="container">
-            &copy; 2024 - WaterLoggerWebApp
+            <main role="main" class="pb-3">
+                @RenderBody()
+            </main>
         </div>
-    </footer>
 
-    <script src="~/lib/jquery/dist/jquery.min.js"></script>
-    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="~/js/site.js" asp-append-version="true"></script>
+        <footer class="border-top footer text-muted">
+            <div class="container">
+                &copy; 2024 - WaterLoggerWebApp
+            </div>
+        </footer>
 
-    @await RenderSectionAsync("Scripts", required: false)
+        <script src="~/lib/jquery/dist/jquery.min.js"></script>
+        <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="~/js/site.js" asp-append-version="true"></script>
+
+        @await RenderSectionAsync("Scripts", required: false)
+   </div>
 </body>
 </html>
